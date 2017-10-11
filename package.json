@@ -1,0 +1,84 @@
+{
+  "name": "rerender",
+  "version": "0.1.0",
+  "description": "use Chrome headless to render a javascript-rendered page as HTML",
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=3.8"
+  },
+  "main": "src/rerender.js",
+  "scripts": {
+    "start": "node dist/bin/server.js",
+    "build": "babel src -d dist -s",
+    "dev": "nodemon src/bin/server.js",
+    "debug-brk": "npm run debug -- --break",
+    "test": "mocha --require test/_helpers test/**/*.spec.js --compilers js:babel-register -R dot --timeout 5000",
+    "test-watch": "npm run test -- --watch",
+    "lint": "eslint src/ test/",
+    "lint-watch": "esw -w src/ test/",
+    "cover": "cross-env NODE_ENV=test nyc npm test"
+  },
+  "author": "rerender",
+  "license": "MIT",
+  "dependencies": {
+    "awilix": "~2.2.5",
+    "awilix-koa": "~0.1.1",
+    "babel-preset-stage-1": "~6.24.1",
+    "babel-register": "~6.24.1",
+    "bristol": "~0.3.3",
+    "cheerio": "~1.0.0-rc.2",
+    "chrome-launcher": "~0.8.1",
+    "chrome-remote-interface": "~0.25.1",
+    "glob": "~7.1.1",
+    "kcors": "2",
+    "koa": "~2.2.0",
+    "koa-bodyparser": "~4.2.0",
+    "koa-convert": "~1.2.0",
+    "koa-respond": "~1.0.1",
+    "koa-router": "~7.1.1",
+    "lodash": "~4.17.4",
+    "palin": "~2.1.1",
+    "source-map-support": "~0.4.14",
+    "yenv": "~1.0.6"
+  },
+  "devDependencies": {
+    "app-module-path": "~2.2.0",
+    "babel-cli": "~6.24.1",
+    "babel-eslint": "~7.2.3",
+    "babel-plugin-istanbul": "~4.1.1",
+    "babel-plugin-source-map-support": "0.0.1",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-plugin-transform-object-rest-spread": "~6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-env": "~1.4.0",
+    "chai": "~3.5.0",
+    "cross-env": "~4.0.0",
+    "eslint": "~3.19.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "~3.5.0",
+    "eslint-plugin-standard": "~3.0.1",
+    "eslint-watch": "~3.1.0",
+    "mocha": "~3.3.0",
+    "nodemon": "~1.11.0",
+    "nyc": "~10.2.0",
+    "sinon": "~2.1.0",
+    "sinon-chai": "~2.9.0",
+    "supertest": "~3.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src/**/*.js"
+    ]
+  }
+}
