@@ -1,5 +1,5 @@
 {
-  "name": "rerender",
+  "name": "koa-rerender",
   "version": "0.1.0",
   "description": "use Chrome headless to render a javascript-rendered page as HTML",
   "engines": {
@@ -18,7 +18,7 @@
     "lint-watch": "esw -w src/ test/",
     "cover": "cross-env NODE_ENV=test nyc npm test"
   },
-  "author": "rerender",
+  "author": "andy*()",
   "license": "MIT",
   "dependencies": {
     "awilix": "~2.2.5",
