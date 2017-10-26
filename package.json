@@ -1,6 +1,6 @@
 {
   "name": "koa-rerender",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "use Chrome headless to render a javascript-rendered page as HTML",
   "engines": {
     "node": ">=8.0.0",
