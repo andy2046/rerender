@@ -1,6 +1,6 @@
 {
   "name": "koa-rerender",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/andy2046/rerender",
   "description": "use Chrome headless to render a javascript-rendered page as HTML",
   "engines": {
@@ -21,6 +21,10 @@
   },
   "author": "andy*()",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy2046/rerender.git"
+  },
   "dependencies": {
     "awilix": "~2.2.5",
     "awilix-koa": "~0.1.1",
