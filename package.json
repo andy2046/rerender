@@ -1,6 +1,6 @@
 {
   "name": "koa-rerender",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "homepage": "https://github.com/andy2046/rerender",
   "description": "use Chrome headless to render a javascript-rendered page as HTML",
   "engines": {
@@ -26,14 +26,16 @@
     "url": "https://github.com/andy2046/rerender.git"
   },
   "dependencies": {
+    "chrome-launcher": "~0.8.1",
+    "chrome-remote-interface": "~0.25.1"
+  },
+  "devDependencies": {
     "awilix": "~2.2.5",
     "awilix-koa": "~0.1.1",
     "babel-preset-stage-1": "~6.24.1",
     "babel-register": "~6.24.1",
     "bristol": "~0.3.3",
     "cheerio": "~1.0.0-rc.2",
-    "chrome-launcher": "~0.8.1",
-    "chrome-remote-interface": "~0.25.1",
     "glob": "~7.1.1",
     "kcors": "2",
     "koa": "~2.2.0",
@@ -44,9 +46,7 @@
     "lodash": "~4.17.4",
     "palin": "~2.1.1",
     "source-map-support": "~0.4.14",
-    "yenv": "~1.0.6"
-  },
-  "devDependencies": {
+    "yenv": "~1.0.6",
     "app-module-path": "~2.2.0",
     "babel-cli": "~6.24.1",
     "babel-eslint": "~7.2.3",
