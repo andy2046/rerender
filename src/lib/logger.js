@@ -1,9 +1,5 @@
-import { Bristol } from 'bristol'
-import palin from 'palin'
+const noop = () => {}
 
-const logger = new Bristol()
-logger.addTarget('console').withFormatter(palin, {
-  rootFolderName: 'rerender' // Edit this to match foldername
-})
+const logger = console || { error: noop, debug: noop }
 
 export default logger
